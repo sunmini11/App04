@@ -23,53 +23,48 @@
         android:layout_height="wrap_content"
         android:text="Single Choice Dialog"
         android:id="@+id/btnSingle"
-        android:layout_below="@+id/btnList"
-        android:layout_alignParentLeft="true"
-        android:layout_marginTop="60dp"
         android:layout_marginLeft="100dp"
-        android:layout_marginRight="100dp" />
+        android:layout_marginRight="100dp"
+        android:layout_below="@+id/btnList"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="List Dialog"
         android:id="@+id/btnList"
-        android:layout_below="@+id/btnSimple"
-        android:layout_alignParentLeft="true"
-        android:layout_marginTop="60dp"
         android:layout_marginLeft="100dp"
-        android:layout_marginRight="100dp" />
+        android:layout_marginRight="100dp"
+        android:layout_below="@+id/btnSimple"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Custom Dialog"
         android:id="@+id/btnCustom"
-        android:layout_below="@+id/btnMulti"
-        android:layout_alignParentLeft="true"
-        android:layout_marginTop="60dp"
         android:layout_marginLeft="100dp"
-        android:layout_marginRight="100dp" />
+        android:layout_marginRight="100dp"
+        android:layout_below="@+id/btnMulti"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Simple Dialog"
         android:id="@+id/btnSimple"
-        android:layout_below="@+id/textView"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="60dp"
         android:layout_marginLeft="100dp"
-        android:layout_marginRight="100dp" />
+        android:layout_marginRight="100dp"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Multi-Choices Dialog"
         android:id="@+id/btnMulti"
-        android:layout_below="@+id/btnSingle"
-        android:layout_alignParentLeft="true"
-        android:layout_marginTop="60dp"
         android:layout_marginLeft="100dp"
-        android:layout_marginRight="100dp" />
+        android:layout_marginRight="100dp"
+        android:layout_below="@+id/btnSingle"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

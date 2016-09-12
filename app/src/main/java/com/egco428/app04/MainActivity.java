@@ -2,6 +2,8 @@ package com.egco428.app04;
 
 import android.app.Dialog;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -130,18 +132,48 @@ public class MainActivity extends AppCompatActivity {
 
         buttonCustom.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(final View view) {
                 final Dialog dialog = new Dialog(MainActivity.this);
                 dialog.setTitle("Login Dialog");
                 dialog.setContentView(R.layout.dialog_custom);
 
-                final EditText username = (EditText)findViewById(R.id.username);
-                final EditText password = (EditText)findViewById(R.id.password);
-                final Button buttonLogin = (Button)findViewById(R.id.login);
-                final Button buttonCancel = (Button)findViewById(R.id.cancel);
-                
+                final EditText username = (EditText) dialog.findViewById(R.id.username);
+                final EditText password = (EditText) dialog.findViewById(R.id.password);
+                FloatingActionButton buttonLogin = (FloatingActionButton) dialog.findViewById(R.id.login);
+                FloatingActionButton buttonCancel = (FloatingActionButton) dialog.findViewById(R.id.cancel);
+                buttonCancel.setOnClickListener(new View.OnClickListener() {
+
+                    @Override
+                    public void onClick(View view) {
+                        dialog.dismiss();
+                    }
+                });
+
+                buttonLogin.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if (username.getText().toString().equals("admin") && password.getText().toString().equals("1234")) {
+                            sendMethod(view);
+                            Toast.makeText(getApplicationContext(), "Login Success", Toast.LENGTH_LONG).show();
+
+                        }
+
+                        else{
+                            Toast.makeText(getApplicationContext(),"Login Fail", Toast.LENGTH_LONG).show();
+                        }
+
+                    }
+                });
+                dialog.show();
             }
+
         });
     }
-
+    public void sendMethod(View view){
+        Intent intent = new Intent(this,Login.class); // Intent = define destination page
+        startActivity(intent);
+        finish();
+    }
 }
+
+
