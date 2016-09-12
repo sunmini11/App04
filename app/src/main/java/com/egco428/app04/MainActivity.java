@@ -16,7 +16,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String[] CLUBS = {"BTS","GOT7","BigBang","WINNER","2PM"};
+    private static final String[] CLUBS = {"Liam","Louis","Harry","Niall","Zayn"};
     String msgSelected;
     ArrayList<Integer> msgMultiSelected;
 
@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(),"you likes "+selected,Toast.LENGTH_LONG).show();
                     }
                 });
-                builder.setNegativeButton("Don't like any group",null);
+                builder.setNegativeButton("Don't like anyone",null);
                 builder.create();
                 builder.show();
             }
@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
 
-                builder.setNegativeButton("Don't like any group",null);
+                builder.setNegativeButton("Don't like anyone",null);
                 builder.create();
                 builder.show();
             }
@@ -124,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
 
-                builder.setNegativeButton("Don't like any group",null);
+                builder.setNegativeButton("Don't like anyone",null);
                 builder.create();
                 builder.show();
             }
